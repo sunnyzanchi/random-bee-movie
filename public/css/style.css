@@ -1,0 +1,132 @@
+*{
+  box-sizing: border-box;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  color: #fff;
+  font-family: 'Bree Serif', sans-serif;
+  font-size: 16px;
+}
+html, body{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.background{
+    background-image: url('/vimg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -moz-fliter: blur(2px) grayscale(30%);
+    -webkit-filter: blur(2px) grayscale(30%);
+    filter: blur(2px) grayscale(30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+@media(min-width: 700px){
+  .background{
+    background-image: url('/himg');
+  }
+}
+.container{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  min-height: 100%;
+  overflow: auto;
+  padding: 15px;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+ul{
+  list-style: none;
+  margin: auto;
+  max-width: 800px;
+  padding: 0;
+  text-align: center;
+}
+li{
+  font-size: 24px;
+  line-height: 1.4;
+  margin: 30px 0;
+  padding: 0;
+  text-shadow: 2px 2px 2px rgba(0,0,0,.6);
+}
+footer{
+  background: #444;
+  bottom: 0;
+  height: 10%;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+.info{
+  bottom: 15px;
+  color: rgba(255,255,255,.5);
+  position: absolute;
+  right: 15px;
+  transition: .1s;
+  z-index: 2;
+}
+.info:hover{
+  color: rgba(255,255,255,.9);
+}
+@media(min-width: 350px){
+  li{
+    font-size: 26px;
+  }
+}
+@media(min-width: 400px){
+  li{
+    font-size: 28px;
+  }
+}
+@media(min-width: 450px){
+  li{
+    font-size: 30px;
+  }
+}
+@media(min-width: 500px){
+  li{
+    font-size: 32px;
+  }
+}
+@media(min-width: 700px){
+  li{
+    font-size: 34px;
+  }
+}
+@media(min-width: 900px){
+  li{
+    line-height: 1.3;
+    font-size: 36px;
+    margin: 35px;
+  }
+}
+@media(min-width: 1000px){
+  ul{
+    max-width: 850px;
+  }
+  li{
+    line-height: 1.2;
+    font-size: 48px;
+    margin: 40px;
+  }
+}
+@media(min-width: 1200px){
+  ul{
+    max-width: 950px;
+  }
+  li{
+    font-size: 54px;
+    margin: 45px;
+  }
+}
