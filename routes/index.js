@@ -15,15 +15,13 @@ router.get('/', function(req, res, next) {
 router.get('/api', function(req, res, next) {
   // If no query string with the number is preset,
   // render the instruction page for the API
-  if(!req.query.number){
-    res.render('api');
-  }
-  else{
+  var number = req.query.number || 3;
+  if(number < 0)number = 3;
     fs.readFile('./text', 'utf-8', (err, data) => {
-      var sentences = getSentences(data, req.query.number || 1);
+      var sentences = getSentences(data, number || 3);
       res.json({sentences});
     });
-  }
+
 });
 
 router.get('/about', function(req, res, next){
